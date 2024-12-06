@@ -1,0 +1,30 @@
+Guide to Using the Modified EEG Plot Function
+
+1. Main Function: eeginplot.m
+The main function is eeginplot, which is a modified version of the original MATLAB eegplot function. This enhanced version includes additional features for partial interpolation.
+
+2. Functionality of WinRej.m
+The WinRej function is designed to revert the values of selected channels in highlighted segments to be interpolated.
+Inside WinRej, another function, segment_interpolation.m , is called to handle the interpolation process in a for loop.
+
+3. segment_interpolation
+This function interpolates each segment based on the associated selected channels derived from the WinRej values. 
+It ensures precise handling of the selected data for interpolation.
+
+4. Plugin Integration
+The following two functions are required to call eeginplot from a plugin:
+	eegplugin_partial_interpolation.m
+	highlight_interpolate_gui.m
+
+
+5. Setting Up the Plugin
+To integrate the plugin into EEGLAB:
+Place the .m files (including eegplugin_partial_interpolation.m and highlight_interpolate_gui.m) in the directory:
+MATLAB/toolbox/eeglab/plugins/partial_interpolation
+
+Use MATLAB's setpath function to add this directory to the MATLAB path.
+
+
+6. Accessing the Plugin in EEGLAB
+After setting up the plugin, it will appear under the Tools menu in EEGLAB. 
+You can now use it for advanced EEG data processing and partial interpolation tasks.
