@@ -37,7 +37,7 @@ EEGINPLOT is a modified version of the original `eegplot()` function from EEGLAB
    - Use EEGLAB to load the dataset you wish to analyze.
 
 2. **Open EEGINPLOT:**
-   - Access it through the EEGLAB GUI.(Under Tools-->Partial Interpolation)
+   - Access it through the EEGLAB GUI. **(Under Tools-->Partial Interpolation)**
    - Alternatively, call the function from the MATLAB command window:
      ```matlab
      eeginplot(EEG.data, 'srate', EEG.srate);
