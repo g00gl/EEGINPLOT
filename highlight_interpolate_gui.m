@@ -13,8 +13,10 @@ function highlight_interpolate_gui
         return;
     end
 
-    % Now that we know EEG data is loaded, we can safely call eeginplot
-    eeginplot(EEG.data, 'srate', EEG.srate);
+% Now that we know EEG data is loaded, we can safely call eeginplot
+    eeginplot(EEG.data,...
+        'srate', EEG.srate,...
+        'events',   EEG.event);
 
     % If your eeginplot function uses channel locations, also pass 'eloc_file' if needed:
     % eeginplot(EEG.data, 'srate', EEG.srate, 'eloc_file', EEG.chanlocs);
